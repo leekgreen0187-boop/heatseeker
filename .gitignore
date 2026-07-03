@@ -1,0 +1,25 @@
+# Mistakenly created local backup folders
+*.folder-backup/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor settings
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs and temporary files
+*.log
+*.tmp
+*~
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies (not currently required)
+node_modules/
