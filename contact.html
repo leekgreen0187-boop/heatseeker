@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact the HeatSeeker sneaker collection team.">
+  <title>Contact | HeatSeeker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="inner-page">
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="HeatSeeker home">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>HeatSeeker</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Discover</a>
+      <a href="about.html">Our story</a>
+      <a class="nav-cta active" href="contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main>
+    <section class="contact-layout">
+      <!-- Contact Intro -->
+      <div class="contact-intro">
+        <p class="eyebrow">Let's talk sneakers</p>
+        <h1>Got a pair<br><em>on your mind?</em></h1>
+        <p>Share a recommendation, ask about the collection, or just tell us the one pair you wish you never let go.</p>
+        <div class="contact-note">
+          <span aria-hidden="true">↗</span>
+          <p>
+            <strong>Usually quick on our feet.</strong><br>
+            Expect a reply within two business days.
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form" id="contact-form" novalidate>
+        <!-- Name and Email Row -->
+        <div class="field-row">
+          <div class="form-field">
+            <label for="name">Your name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required>
+            <small class="field-error" id="name-error"></small>
+          </div>
+          <div class="form-field">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required>
+            <small class="field-error" id="email-error"></small>
+          </div>
+        </div>
+
+        <!-- Subject Select -->
+        <div class="form-field">
+          <label for="subject">What's this about?</label>
+          <select id="subject" name="subject">
+            <option value="Collection recommendation">Collection recommendation</option>
+            <option value="General question">General question</option>
+            <option value="Collaboration">Collaboration</option>
+          </select>
+        </div>
+
+        <!-- Message Textarea -->
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            placeholder="Tell us about it…"></textarea>
+          <small class="field-error" id="message-error"></small>
+        </div>
+
+        <!-- Submit Button and Status -->
+        <button class="button-primary form-submit" type="submit">Send message <span>→</span></button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div>
+      <a class="brand footer-brand" href="index.html">
+        <span class="brand-mark">H</span>
+        <span>HeatSeeker</span>
+      </a>
+      <p>Good pairs. Better stories.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Discover</a>
+      <a href="about.html">Our story</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copyright">© <span id="current-year"></span> HeatSeeker. Built for the culture.</p>
+  </footer>
+</body>
+</html>

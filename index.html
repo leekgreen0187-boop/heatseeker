@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HeatSeeker — discover iconic sneakers and modern favorites.">
+  <title>HeatSeeker | Find Your Next Pair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="HeatSeeker home">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span>HeatSeeker</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a class="active" href="index.html" aria-current="page">Discover</a>
+      <a href="about.html">Our story</a>
+      <a class="nav-cta" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-orb orb-one"></div>
+      <div class="hero-orb orb-two"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Curated sneaker archive</p>
+        <h1>Find the pair that<br><em>started the story.</em></h1>
+        <p class="hero-copy">From hardwood icons to everyday heat, explore the silhouettes that shaped sneaker culture.</p>
+        <form class="search-bar" id="search-form" role="search">
+          <label class="sr-only" for="search-input">Search sneakers</label>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="Search by sneaker, brand, or rarity…"
+            autocomplete="off">
+          <button type="submit" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m21 21-4.35-4.35m2.35-5.65A8 8 0 1 1 3 11a8 8 0 0 1 16 0Z"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+      <div class="catalog-heading">
+        <div>
+          <p class="eyebrow dark">The rotation</p>
+          <h2 id="catalog-title">Sneaker collection</h2>
+          <p class="result-count" id="result-count" aria-live="polite">Loading the collection…</p>
+        </div>
+        <div class="sort-control">
+          <label for="sort-select">Sort sneakers by</label>
+          <select id="sort-select">
+            <option value="default">Featured</option>
+            <option value="az">Name A–Z</option>
+            <option value="za">Name Z–A</option>
+            <option value="newest">Release year: newest first</option>
+            <option value="oldest">Release year: oldest first</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="status-message" id="status-message" aria-live="polite">
+        <span class="loader" aria-hidden="true"></span>
+        Pulling sneaker imagery from the archive…
+      </div>
+      <div class="sneaker-grid" id="sneaker-grid"></div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span aria-hidden="true">⌕</span>
+        <h3>No pairs found</h3>
+        <p>Try a different sneaker, brand, or rarity.</p>
+        <button id="clear-search" type="button">Clear search</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div>
+      <a class="brand footer-brand" href="index.html">
+        <span class="brand-mark">H</span>
+        <span>HeatSeeker</span>
+      </a>
+      <p>Good pairs. Better stories.</p>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Discover</a>
+      <a href="about.html">Our story</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p class="copyright">© <span id="current-year"></span> HeatSeeker. Built for the culture.</p>
+  </footer>
+</body>
+</html>
